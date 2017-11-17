@@ -1,0 +1,23 @@
+#footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: black;
+  bottom: 0;
+  height: 5vh;
+}
+
+#smiley {
+  text-decoration: none;
+}
+
+#smiley {
+  cursor: pointer;
+}
+
+#github {
+  text-decoration: none;
+  color: white;
+}
+

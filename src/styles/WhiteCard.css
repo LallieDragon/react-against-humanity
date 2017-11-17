@@ -1,0 +1,15 @@
+#white-card {
+  width: 248px;
+  height: 348px;
+  border: 1px solid black;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  border-radius: 13px;
+  color: black;
+  background-color: white;
+}
+
+#white-text {
+  padding: 10px;
+  font-size: 30px;
+}
