@@ -5,7 +5,7 @@ export default class WhiteCard extends Component {
   render() {
     return (
       <div id="white-card">
-        <p id="white-text"> { this.props.text } </p>
+        <h1 id="white-text"> { this.props.text } </h1>
       </div>
     );
   }

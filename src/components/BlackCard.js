@@ -5,7 +5,7 @@ export default class BlackCard extends Component {
   render() {
     return (
       <div id="black-card">
-        <p id="black-text"> { this.props.text } </p>
+        <h1 id="black-text"> { this.props.text } </h1>
       </div>
     );
   }

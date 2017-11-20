@@ -15,3 +15,17 @@ html, body {
   flex-wrap: wrap;
 }
 
+#react-card-title {
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#card-button {
+  margin-top: 10px;
+}

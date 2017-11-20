@@ -27,12 +27,12 @@ export default class Home extends Component {
     axios.get(url)
       .then((response) => {
         console.log(response);
-        let count = 0;
         randomBlack = response.data.blackCards[Math.floor(Math.random()*response.data.blackCards.length)].text;
         randomWhite = response.data.whiteCards[Math.floor(Math.random()*response.data.blackCards.length)];
         if ((randomBlack.match(/_/g) || []).length > 1) {
-          this.axiosRequest(e);
+          this.axiosRequest(e.persist());
         }
+
         this.setState({
           blackCard: randomBlack,
           whiteCard: randomWhite
@@ -47,14 +47,16 @@ export default class Home extends Component {
     return (
       <div id="home">
         <Header />
+        <div className="buttons">
+          <button id="card-button" onClick={ this.axiosRequest }>Generate Random Cards</button>
+        </div>
+
         <div id="cards">
-          <BlackCard text={ this.state.blackCard }/>
-          <WhiteCard text={ this.state.whiteCard }/>
+          <BlackCard text={ this.state.blackCard ? this.state.blackCard : <h1 id="react-card-title">React<br />Against<br />Humanity</h1> }/>
+          <WhiteCard text={ this.state.whiteCard ? this.state.whiteCard : <h1 id="react-card-title">React<br />Against<br />Humanity</h1> }/>
         </div>
-        <div id="new-cards-button">
-          <button onClick={ this.axiosRequest }>Generate New Cards</button>
-        </div>
-        <div id="share">
+
+        <div className="buttons">
           <FBShare />
         </div>
         <Footer />
